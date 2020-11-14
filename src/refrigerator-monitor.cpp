@@ -1,5 +1,17 @@
+/******************************************************/
+//       THIS IS A GENERATED FILE - DO NOT EDIT       //
+/******************************************************/
+
+#include "Particle.h"
+#line 1 "/Users/patrickjmcd/github/patrickjmcd/refrigerator-monitor/refrigerator-monitor/src/refrigerator-monitor.ino"
+void handler(const char *topic, const char *data);
+void setup();
+void loop();
+void printVoltage();
+void printValues();
+#line 1 "/Users/patrickjmcd/github/patrickjmcd/refrigerator-monitor/refrigerator-monitor/src/refrigerator-monitor.ino"
 PRODUCT_ID(12447);
-PRODUCT_VERSION(2);
+PRODUCT_VERSION(1);
 
 // This #include statement was automatically added by the Particle IDE.
 #include <SparkFunMAX17043.h>
