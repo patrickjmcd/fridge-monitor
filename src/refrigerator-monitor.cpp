@@ -11,7 +11,7 @@ void printVoltage();
 void printValues();
 #line 1 "/Users/patrickjmcd/github/patrickjmcd/refrigerator-monitor/refrigerator-monitor/src/refrigerator-monitor.ino"
 PRODUCT_ID(12447);
-PRODUCT_VERSION(1);
+PRODUCT_VERSION(3);
 
 // This #include statement was automatically added by the Particle IDE.
 #include <SparkFunMAX17043.h>
@@ -93,8 +93,14 @@ void loop()
 {
   printValues();
   printVoltage();
-  // delay(30000);
-  System.sleep(SLEEP_MODE_DEEP, 60);
+  if (deviceName != "default")
+  {
+    System.sleep(SLEEP_MODE_DEEP, 60);
+  }
+  else
+  {
+    delay(10000);
+  }
 }
 
 void printVoltage()

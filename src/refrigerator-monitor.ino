@@ -1,5 +1,5 @@
 PRODUCT_ID(12447);
-PRODUCT_VERSION(2);
+PRODUCT_VERSION(4);
 
 // This #include statement was automatically added by the Particle IDE.
 #include <SparkFunMAX17043.h>
@@ -79,10 +79,17 @@ void setup()
 
 void loop()
 {
-  printValues();
-  printVoltage();
-  // delay(30000);
-  System.sleep(SLEEP_MODE_DEEP, 60);
+
+  if (deviceName != "default")
+  {
+    printValues();
+    printVoltage();
+    System.sleep(SLEEP_MODE_DEEP, 60);
+  }
+  else
+  {
+    delay(10000);
+  }
 }
 
 void printVoltage()
